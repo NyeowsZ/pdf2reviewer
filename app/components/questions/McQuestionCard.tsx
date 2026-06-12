@@ -1,7 +1,7 @@
 import { MultipleChoicesQuestion } from "@/app/page";
 import { useState } from "react";
 
-export const McQuestionCard = (question: MultipleChoicesQuestion) => {
+const McQuestionCard = (question: MultipleChoicesQuestion) => {
   const [chosenMcq, setChosenMcq] = useState<number>();
 
   return (

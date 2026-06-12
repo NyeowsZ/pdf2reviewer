@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { QuestionCardProp } from "../page";
 import McQuestionCard from "@/app/components/questions/McQuestionCard";
+import EnumQuestionCard from "@/app/components/questions/EnumQuestionCard";
 
 const QuestionCard = ({ index, question }: QuestionCardProp) => {
   const [userInput, setUserInput] = useState("");
@@ -49,7 +50,7 @@ const QuestionCard = ({ index, question }: QuestionCardProp) => {
             : ""}
         </h1>
         {question.type === "mcq" ? (
-          <McQuestionCard {...question}></McQuestionCard>
+          <McQuestionCard {...question} />
         ) : question.type === "identification" ? (
           <input
             type="text"
@@ -59,28 +60,7 @@ const QuestionCard = ({ index, question }: QuestionCardProp) => {
             onChange={(e) => setUserInput(e.target.value)}
           />
         ) : question.type === "enumeration" ? (
-          <ul
-            className={`flex flex-col gap-2.5 pl-5 ${question.isOrdered ? "list-decimal" : "list-disc"}`}
-          >
-            {question.answers.map((val, idx) => {
-              return (
-                <li key={idx} className="">
-                  <input
-                    type="text"
-                    placeholder="Your answer"
-                    value={answers[idx]}
-                    onChange={(e) => enumUpdateAnswer(idx, e.target.value)}
-                    className={`px-5 py-2 border-b outline-0 focus:text-black focus:font-normal placeholder-shown:text-black 
-                    ${
-                      enumCheckAnswer(idx, answers[idx])
-                        ? "font-semibold"
-                        : "text-red-500"
-                    }`}
-                  />
-                </li>
-              );
-            })}
-          </ul>
+          <EnumQuestionCard {...question} />
         ) : (
           ""
         )}
