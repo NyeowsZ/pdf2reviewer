@@ -1,10 +1,10 @@
 "use client";
 import { useState } from "react";
 import { QuestionCardProp } from "../page";
+import McQuestionCard from "@/app/components/questions/McQuestionCard";
 
 const QuestionCard = ({ index, question }: QuestionCardProp) => {
   const [userInput, setUserInput] = useState("");
-  const [chosenMcq, setChosenMcq] = useState<number>();
   const [answers, setAnswers] = useState<string[]>(() => {
     if (question.type === "enumeration") {
       return new Array(question.answers.length).fill("");
@@ -37,10 +37,6 @@ const QuestionCard = ({ index, question }: QuestionCardProp) => {
     }
   };
 
-  const pickChoice = (index: number) => {
-    setChosenMcq(index);
-  };
-
   return (
     <>
       <div
@@ -53,19 +49,7 @@ const QuestionCard = ({ index, question }: QuestionCardProp) => {
             : ""}
         </h1>
         {question.type === "mcq" ? (
-          <div className="flex flex-col items-start gap-2.5 md:gap-5 text-neutral-800 md:flex-row md:items-center">
-            {question.choices.map((val, idx) => {
-              return (
-                <button
-                  key={idx}
-                  className={`text-start cursor-pointer hover:border-black border-white border-b ${chosenMcq == idx ? (val.isCorrect ? "font-semibold" : "text-red-500") : ""}`}
-                  onClick={() => pickChoice(idx)}
-                >
-                  {String.fromCharCode(65 + idx)}. {val.choice}
-                </button>
-              );
-            })}
-          </div>
+          <McQuestionCard {...question}></McQuestionCard>
         ) : question.type === "identification" ? (
           <input
             type="text"
