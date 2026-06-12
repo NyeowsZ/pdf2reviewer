@@ -2,7 +2,6 @@
 import { useEffect, useState } from "react";
 import { addPost, getPost } from "@/db";
 import { AddPost, Message, Posts } from "@/db/types";
-import PostCard from "@/app/components/postCard";
 
 const Page = () => {
   const [title, setTitle] = useState("");
