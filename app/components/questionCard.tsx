@@ -58,7 +58,7 @@ const QuestionCard = ({ index, question }: QuestionCardProp) => {
               return (
                 <button
                   key={idx}
-                  className={`text-start ${chosenMcq == idx ? (val.isCorrect ? "font-semibold" : "text-red-500") : ""}`}
+                  className={`text-start cursor-pointer hover:border-black border-white border-b ${chosenMcq == idx ? (val.isCorrect ? "font-semibold" : "text-red-500") : ""}`}
                   onClick={() => pickChoice(idx)}
                 >
                   {String.fromCharCode(65 + idx)}. {val.choice}

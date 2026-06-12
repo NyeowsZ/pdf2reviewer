@@ -40,203 +40,195 @@ const Page = () => {
   const [questions, setQuestions] = useState<Questions>([
     {
       question:
-        "Which core resource is required to produce Silicon in a Silicon Smelter?",
+        "Which attribute was entirely removed from Dota 2 in the New Frontiers (7.33) update, making way for the Universal hero type?",
       type: "mcq",
       choices: [
-        { choice: "Copper and Lead", isCorrect: false },
-        { choice: "Sand and Coal", isCorrect: true },
-        { choice: "Coal and Pyratite", isCorrect: false },
-        { choice: "Titanium and Thorium", isCorrect: false },
-      ],
-    },
-    {
-      question: "What is the primary function of a Liquid Router?",
-      type: "mcq",
-      choices: [
-        { choice: "To store up to 1000 units of liquid.", isCorrect: false },
-        { choice: "To accelerate the flow rate of liquids.", isCorrect: false },
-        {
-          choice: "To split liquid inputs equally into up to three outputs.",
-          isCorrect: true,
-        },
-        {
-          choice: "To filter specific liquids out of a pipeline.",
-          isCorrect: false,
-        },
-      ],
-    },
-    {
-      question:
-        "Which of the following turrets can accept liquid ammo directly to shock enemies?",
-      type: "mcq",
-      choices: [
-        { choice: "Wave", isCorrect: true },
-        { choice: "Scatter", isCorrect: false },
-        { choice: "Duo", isCorrect: false },
-        { choice: "Scorch", isCorrect: false },
-      ],
-    },
-    {
-      question:
-        "What dangerous event occurs if a Thorium Reactor runs out of Cryoflux while actively processing Thorium?",
-      type: "mcq",
-      choices: [
-        { choice: "It shuts down safely.", isCorrect: false },
-        {
-          choice: "It explodes, destroying a large surrounding area.",
-          isCorrect: true,
-        },
-        { choice: "It temporarily stops generating power.", isCorrect: false },
-        { choice: "It turns into an unminable scrap tile.", isCorrect: false },
-      ],
-    },
-    {
-      question:
-        "Which conveyor type provides the fastest item throughput in the Serpulo tech tree?",
-      type: "mcq",
-      choices: [
-        { choice: "Titanium Conveyor", isCorrect: false },
-        { choice: "Armored Conveyor", isCorrect: false },
-        { choice: "Plastanium Conveyor", isCorrect: true },
-        { choice: "Junction", isCorrect: false },
-      ],
-    },
-    {
-      question:
-        "What environment block is required to place a Thermal Generator for passive power generation?",
-      type: "mcq",
-      choices: [
-        { choice: "Snow", isCorrect: false },
-        { choice: "Magma / Hot Rock", isCorrect: true },
-        { choice: "Water", isCorrect: false },
-        { choice: "Oil Tar", isCorrect: false },
-      ],
-    },
-    {
-      question:
-        "Which unit factory tier directly produces the basic ground support unit 'Nova'?",
-      type: "mcq",
-      choices: [
-        { choice: "Additive Reconstructer", isCorrect: false },
-        { choice: "Multiplicative Reconstructor", isCorrect: false },
-        { choice: "Exponential Reconstructor", isCorrect: false },
-        { choice: "Ground Factory", isCorrect: true },
-      ],
-    },
-    {
-      question:
-        "What happens when an Armored Conveyor receives an item from the side?",
-      type: "mcq",
-      choices: [
-        { choice: "It accepts the item normally.", isCorrect: false },
+        { choice: "Agility", isCorrect: false },
         {
           choice:
-            "It blocks the item unless it comes from another conveyor facing into it.",
+            "None, attributes were not removed; Universal was added as a fourth category",
           isCorrect: true,
         },
-        { choice: "It instantly burns the item.", isCorrect: false },
-        { choice: "It routes the item backward.", isCorrect: false },
+        { choice: "Intelligence", isCorrect: false },
+        { choice: "Strength", isCorrect: false },
       ],
     },
     {
       question:
-        "Which processor type offers the largest code execution capacity and highest speed in Mindustry Logic?",
+        "What is the primary damage type of Timbersaw's 'Whirling Death' if it cuts down a tree?",
       type: "mcq",
       choices: [
-        { choice: "Micro Processor", isCorrect: false },
-        { choice: "Logic Display", isCorrect: false },
-        { choice: "Hyper Processor", isCorrect: true },
-        { choice: "World Processor", isCorrect: false },
+        { choice: "Pure damage", isCorrect: true },
+        { choice: "Magical damage", isCorrect: false },
+        { choice: "Physical damage", isCorrect: false },
+        { choice: "Composite damage", isCorrect: false },
       ],
     },
     {
       question:
-        "What resource is specifically used to construct Phase Fabrics inside a Phase Weaver?",
+        "Which of the following items provides a passive bonus called 'Swiftasfuck' in its historical or active movement mechanics, or more accurately, which item upgrades from Blitz Knuckles?",
       type: "mcq",
       choices: [
-        { choice: "Thorium and Sand", isCorrect: true },
-        { choice: "Titanium and Metaglass", isCorrect: false },
-        { choice: "Surge Alloy and Scrap", isCorrect: false },
-        { choice: "Graphite and Coal", isCorrect: false },
+        { choice: "Shadow Blade", isCorrect: false },
+        { choice: "Monkey King Bar", isCorrect: false },
+        { choice: "Orchid Malevolence", isCorrect: true },
+        { choice: "Wind Waker", isCorrect: false },
       ],
     },
-
-    // =========================================================================
-    // ENUMERATION QUESTIONS (5)
-    // =========================================================================
     {
       question:
-        "Enumerate the three basic starting materials required to craft Metaglass inside a Kiln.",
-      type: "enumeration",
-      answers: ["Sand", "Lead"],
-      isOrdered: false,
-    },
-    {
-      question:
-        "Enumerate four types of power generation blocks available on the planet Serpulo.",
-      type: "enumeration",
-      answers: [
-        "Combustion Generator",
-        "Thermal Generator",
-        "Steam Generator",
-        "Differential Generator",
+        "How long is the initial duration of Aegis of the Immortal before it automatically expires and reclaims the holder's life?",
+      type: "mcq",
+      choices: [
+        { choice: "6 minutes", isCorrect: false },
+        { choice: "5 minutes", isCorrect: true },
+        { choice: "4 minutes", isCorrect: false },
+        { choice: "3 minutes", isCorrect: false },
       ],
+    },
+    {
+      question:
+        "Which hero has the highest base armor value at level 1 (excluding items and abilities)?",
+      type: "mcq",
+      choices: [
+        { choice: "Terrorblade", isCorrect: true },
+        { choice: "Ogre Magi", isCorrect: false },
+        { choice: "Techies", isCorrect: false },
+        { choice: "Bounty Hunter", isCorrect: false },
+      ],
+    },
+    {
+      question:
+        "What is the maximum number of standard item slots available in a hero's main inventory backpack (excluding neutral slots and TP slots)?",
+      type: "mcq",
+      choices: [
+        { choice: "9 slots", isCorrect: false },
+        { choice: "6 slots", isCorrect: true },
+        { choice: "3 slots", isCorrect: false },
+        { choice: "4 slots", isCorrect: false },
+      ],
+    },
+    {
+      question:
+        "Which historical Dota 2 team achieved the first back-to-back International (TI) championships with the exact same roster?",
+      type: "mcq",
+      choices: [
+        { choice: "Team Liquid", isCorrect: false },
+        { choice: "Natus Vincere", isCorrect: false },
+        { choice: "OG", isCorrect: true },
+        { choice: "Team Spirit", isCorrect: false },
+      ],
+    },
+    {
+      question:
+        "What resource does the hero Muerta utilize to temporarily phase her target into the ethereal realm with 'The Calling'?",
+      type: "mcq",
+      choices: [
+        { choice: "Health cost", isCorrect: false },
+        { choice: "Mana", isCorrect: true },
+        { choice: "Souls", isCorrect: false },
+        { choice: "Charges", isCorrect: false },
+      ],
+    },
+    {
+      question:
+        "Which structure on the map grants a team global vision and can be activated to provide a structural True Sight radar scan?",
+      type: "mcq",
+      choices: [
+        { choice: "Outpost", isCorrect: false },
+        { choice: "Tormentor", isCorrect: false },
+        { choice: "Watcher", isCorrect: true },
+        { choice: "Ancient", isCorrect: false },
+      ],
+    },
+    {
+      question:
+        "What status effect completely prevents a hero from turning, moving, attacking, or using spells, essentially pausing their actions entirely?",
+      type: "mcq",
+      choices: [
+        { choice: "Stun", isCorrect: true },
+        { choice: "Silence", isCorrect: false },
+        { choice: "Mute", isCorrect: false },
+        { choice: "Disarm", isCorrect: false },
+      ],
+    },
+    {
+      question: "Enumerate 3 active items required to craft a 'Refresher Orb'.",
+      type: "enumeration",
+      answers: ["Ring of Tarrasque", "Tiara of Selemene", "Recipe"],
       isOrdered: false,
     },
     {
       question:
-        "Enumerate the elements combined in a Surge Smelter to produce Surge Alloy.",
+        "Enumerate the 3 positions/roles in a standard competitive match usually designated as the Core positions (Positions 1, 2, and 3). Name them by their common lane positions.",
       type: "enumeration",
-      answers: ["Copper", "Lead", "Titanium", "Silicon"],
-      isOrdered: false,
-    },
-    {
-      question:
-        "Enumerate the progression tiers of Serpulo Cores from lowest capacity to highest capacity.",
-      type: "enumeration",
-      answers: ["Core: Shard", "Core: Foundation", "Core: Nucleus"],
+      answers: ["Safe Lane", "Mid Lane", "Off Lane"],
       isOrdered: true,
     },
     {
       question:
-        "Enumerate three distinct liquid types present in standard vanilla Mindustry gameplay.",
+        "Enumerate the 7 standard Power Runes that can spawn in the river channels during the early game phase.",
       type: "enumeration",
-      answers: ["Water", "Slag", "Oil", "Cryofluid"],
+      answers: [
+        "Haste",
+        "Double Damage",
+        "Regeneration",
+        "Invisibility",
+        "Illusion",
+        "Arcane",
+        "Shield",
+      ],
       isOrdered: false,
     },
-
-    // =========================================================================
-    // IDENTIFICATION QUESTIONS (5)
-    // =========================================================================
     {
       question:
-        "What is the name of the radioactive purple resource used to feed RTG Generators and Thorium Reactors?",
-      type: "identification",
-      answers: ["Thorium"],
+        "Enumerate the original 3 primary Attributes that defined every hero's main scaling before Universal heroes were introduced.",
+      type: "enumeration",
+      answers: ["Strength", "Agility", "Intelligence"],
+      isOrdered: false,
     },
     {
       question:
-        "Which defensive structure requires Metaglass or Graphite as ammo and is dedicated strictly to wiping out air units?",
-      type: "identification",
-      answers: ["Scatter"],
+        "Enumerate the 5 items that make up the components of 'Power Treads' before applying the final modification.",
+      type: "enumeration",
+      answers: [
+        "Boots of Speed",
+        "Belt of Strength",
+        "Band of Elvenskin",
+        "Robe of the Magi",
+        "Gloves of Haste",
+      ],
+      isOrdered: false,
     },
     {
       question:
-        "What is the name of the desert-like planet introduced alongside Serpulo in Mindustry's v7 update?",
+        "What is the name of the colossal neutral monster located in his pit who drops the Aegis of the Immortal upon death?",
       type: "identification",
-      answers: ["Erekir"],
+      answers: ["Roshan"],
     },
     {
       question:
-        "What specific fluid is created by mixing Water and Titanium in a Cryofluid Mixer to cool down heavy machinery?",
+        "Which hero is formally known by the title 'The Grand Magus' and is notorious for stealing the ultimate abilities of opponents?",
       type: "identification",
-      answers: ["Cryofluid"],
+      answers: ["Rubick"],
     },
     {
       question:
-        "What assembly component block allows item conveyor lines to cross directly over one another without mixing their items?",
+        "What is the name of the core economy metric that tracks a player's total accumulated value in items and unspent gold?",
       type: "identification",
-      answers: ["Junction"],
+      answers: ["Net Worth", "Networth"],
+    },
+    {
+      question:
+        "What in-game consumable item is permanently consumed to grant a hero a permanent 7th item slot strictly for their Aghanim's Scepter upgrade?",
+      type: "identification",
+      answers: ["Aghanim's Blessing", "Aghanims Blessing"],
+    },
+    {
+      question:
+        "Which specific item allows a hero to instantly teleport to a friendly structure or outpost after a brief channeling period?",
+      type: "identification",
+      answers: ["Town Portal Scroll", "TP Scroll"],
     },
   ]);
 
