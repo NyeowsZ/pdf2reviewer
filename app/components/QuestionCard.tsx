@@ -6,39 +6,6 @@ import EnumQuestionCard from "@/app/components/questions/EnumerationQuestionCard
 import IdentificationQuestionCard from "./questions/IdentificationQuestionCard";
 
 const QuestionCard = ({ index, question }: QuestionCardProp) => {
-  const [userInput, setUserInput] = useState("");
-  const [answers, setAnswers] = useState<string[]>(() => {
-    if (question.type === "enumeration") {
-      return new Array(question.answers.length).fill("");
-    }
-
-    return [];
-  });
-
-  const enumUpdateAnswer = (index: number, newAnswer: string) => {
-    const temp = [...answers];
-    temp[index] = newAnswer;
-    setAnswers(temp);
-  };
-
-  const enumCheckAnswer = (idx: number, answer: string) => {
-    if (question.type === "enumeration") {
-      if (!question.isOrdered) {
-        return (
-          question.answers.some((ans) => ans === answer) &&
-          !answers.some((ans, i) => {
-            if (i >= idx) {
-              return false;
-            }
-            return ans === answer;
-          })
-        );
-      } else {
-        return question.answers[idx] == answer;
-      }
-    }
-  };
-
   return (
     <>
       <div
