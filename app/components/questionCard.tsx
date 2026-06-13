@@ -3,6 +3,7 @@ import { useState } from "react";
 import { QuestionCardProp } from "../page";
 import McQuestionCard from "@/app/components/questions/McQuestionCard";
 import EnumQuestionCard from "@/app/components/questions/EnumQuestionCard";
+import IdentificationQuestionCard from "./questions/IdentificationQuestionCard";
 
 const QuestionCard = ({ index, question }: QuestionCardProp) => {
   const [userInput, setUserInput] = useState("");
@@ -52,13 +53,7 @@ const QuestionCard = ({ index, question }: QuestionCardProp) => {
         {question.type === "mcq" ? (
           <McQuestionCard {...question} />
         ) : question.type === "identification" ? (
-          <input
-            type="text"
-            placeholder="Your answer"
-            className={`px-5 py-2 border-b outline-0 focus:text-black focus:font-normal placeholder-shown:text-black ${question.answers.some((ans) => ans === userInput) ? "font-semibold" : "text-red-500"}`}
-            value={userInput}
-            onChange={(e) => setUserInput(e.target.value)}
-          />
+          <IdentificationQuestionCard {...question} />
         ) : question.type === "enumeration" ? (
           <EnumQuestionCard {...question} />
         ) : (
