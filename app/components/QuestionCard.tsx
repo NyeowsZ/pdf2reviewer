@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
 import { QuestionCardProp } from "../page";
-import McQuestionCard from "@/app/components/questions/McQuestionCard";
-import EnumQuestionCard from "@/app/components/questions/EnumQuestionCard";
+import McQuestionCard from "@/app/components/questions/MultipleChoicesQuestionCard";
+import EnumQuestionCard from "@/app/components/questions/EnumerationQuestionCard";
 import IdentificationQuestionCard from "./questions/IdentificationQuestionCard";
 
 const QuestionCard = ({ index, question }: QuestionCardProp) => {

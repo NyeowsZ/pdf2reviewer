@@ -1,7 +1,7 @@
 import { EnumerationQuestion } from "@/app/page";
 import { useState } from "react";
 
-const EnumQuestionCard = (question: EnumerationQuestion) => {
+const EnumerationQuestionCard = (question: EnumerationQuestion) => {
   const [answers, setAnswers] = useState<string[]>(() => {
     if (question.type === "enumeration") {
       return new Array(question.answers.length).fill("");
@@ -57,4 +57,4 @@ const EnumQuestionCard = (question: EnumerationQuestion) => {
   );
 };
 
-export default EnumQuestionCard;
+export default EnumerationQuestionCard;

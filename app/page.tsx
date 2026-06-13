@@ -8,7 +8,7 @@ export interface Question {
   type: "mcq" | "enumeration" | "identification";
 }
 
-export interface MultipleChoicesQuestion extends Question {
+export interface MultipleChoiceQuestion extends Question {
   type: "mcq";
   choices: { choice: string; isCorrect: boolean }[];
 }
@@ -25,7 +25,7 @@ export interface IdentificationQuestion extends Question {
 }
 
 export type QuizQuestion =
-  | MultipleChoicesQuestion
+  | MultipleChoiceQuestion
   | EnumerationQuestion
   | IdentificationQuestion;
 
