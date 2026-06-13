@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import QuestionCard from "./components/questionCard";
+import QuestionCard from "./components/QuestionCard";
 
 export interface Question {
   question: string;
