@@ -2,7 +2,7 @@
 import axios from "axios";
 import "dotenv/config";
 
-export const handleLLM = async () => {
+export const handleLLM = async (prompt: string) => {
   const apiKey = process.env.GEMINI_API_KEY;
   const model = process.env.GEMINI_AI_MODEL;
 
